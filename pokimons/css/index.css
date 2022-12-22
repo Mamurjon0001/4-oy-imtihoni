@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #FFD845;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.header__list{
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.pakimon__item:hover{
+    background-color: #000;
+    color: #fff;
+    box-shadow: 13px 17px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+
+
+.header__btn{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #FFD845;
+    cursor: pointer;
+    animation: myAnim 1s ease 0s infinite normal forwards;
+
+}
+.header__btn:hover{
+    background-color: red;
+}
+
+.form{
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.form input, select, button{
+    padding: 10px 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.form button{
+    padding: 10px 50px;
+    border: none;
+    transition: 0.5s;
+}
+
+.form button:hover{
+    background-color: rgba(22, 5, 149, 0.998);
+    color: #fff;
+    box-shadow: 13px 17px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.form button:active{
+    background-color: #fff;
+    color: #000;
+    box-shadow: none;
+}
+
+
+.pakimon__card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+   
+}
+
+.pakimon__item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    width: 250px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.pakimon__img{
+    margin-bottom: 40px;
+    animation: img 2s ease 0s infinite normal forwards;
+}
+@keyframes img {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, 2px);
+	}
+
+	80% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+.pakimon__hr{
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    background-color: #000;
+    color: #000;
+}
+
+.pakimon__btn{
+    color: #fff;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    outline: none;
+    cursor: pointer;
+    animation: myAnim 1s ease 0s infinite normal forwards;
+}
+
+
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
+.titles{
+    font-style: 16px;
+    font-weight: 900;
+}
+.names button{
+    outline: none;
+    border: none;
+}
+
+.names button:hover {
+    color: #FFD845;
+}
+
+.mass{
+    gap: 45px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+
+.loko{
+    display: none;
+}
+.header__img{
+    animation: pic 3s ease 0s infinite normal forwards;
+}
+@keyframes pic {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+@media screen and (max-width:800px) {
+    .header__list{
+        padding: 0 20px;
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header__list img{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .form{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .header__list img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    
+    .header__list img{
+        display: none;
+    }
+    .loko{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: #000;
+        font-weight: 900;
+        width: 60%;
+    }
+    .loko img{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+    .form select, button, input{
+        width: 100%;
+        margin: 0 20px;
+    }
+    .pakimon__item{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
